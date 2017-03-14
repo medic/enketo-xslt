@@ -1,0 +1,22 @@
+#!/bin/bash -eu
+browsers="$@"
+. scripts/lib.bash
+
+log "Comparing generated XML with reference XML..."
+set +e
+cd test/transformation/reference-xml
+for reference in *.html.xml; do
+	for browser in $browsers; do
+		diff_xml $reference ../../../build/generated/$browser/$reference
+	done
+done
+for reference in *.model.xml; do
+	for browser in $browsers; do
+		diff_xml $reference ../../../build/generated/$browser/$reference
+	done
+done
+set -e
+log "Comparison complete."
+
+# TODO fail build if there are any differences between Chrome/Firefox and reference implementation
+

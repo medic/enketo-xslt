@@ -1,29 +1,65 @@
 Enketo XSLT 
 ===========
 
-[![npm version](https://badge.fury.io/js/enketo-xslt.svg)](http://badge.fury.io/js/enketo-xslt) [![Build Status](https://travis-ci.org/enketo/enketo-xslt.svg?branch=master)](https://travis-ci.org/enketo/enketo-xslt)
+[![Build Status](https://travis-ci.org/medic/enketo-xslt.svg?branch=master)](https://travis-ci.org/medic/enketo-xslt)
 
 XSLT sheets used to transform OpenRosa-flavoured XForms into an HTML form and XML instance.
 
-### Use with npm
+This is a fork of [`enketo-xslt`](https://github.com/enketo/enketo-xslt), modified to run client-side, in a web browser.
 
-```
-npm install enketo-xslt --save
-```
+# Browser Support
 
+We commonly test on:
 
-```
-var sheets = require('enketo-xslt');
+* Firefox
+* Chrome
 
-console.log('form sheet', sheets.xslForm);
-console.log('model sheet', sheets.xslModel);
-```
+# Examples
 
-### Use without npm and in any programming language. 
+## Code
+
+(This example uses jQuery to parse strings into [`XMLDocument`](https://developer.mozilla.org/en-US/docs/Web/API/XMLDocument) instances.)
+
+	var htmlTransformXsltAsString = // loaded somehow
+	var modelTransformXsltAsString = // loaded somehow
+	var htmlTransformXslt = jQuery.parseXML(htmlTransformXsltAsString);
+	var modelTransformXslt = jQuery.parseXML(modelTransformXsltAsString);
+
+	var xformXmlAsString = // loaded somehow
+	var xformXml = jQuery.parseXML(xformXmlAsString);
+
+	function transform(xslt, xml) {
+		var p = new XSLTProcessor();
+		p.importStylesheet(xslt);
+
+		var transformed = p.transformToDocument(xml);
+
+		var root = transformed.documentElement.firstElementChild;
+		return new XMLSerializer().serializeToString(root);
+	}
+
+	var formHtml = transformed(htmlTransformXslt, xformXml);
+	var formModel = transformed(modelTransformXslt, xformXml);
+
+## `src/`
+
+There is a fuller example in this repository at `examples/index.js`.
+
+## In the wild
+
+You can find examples of this code in use in [`medic-webapp`](https://github.com/medic/medic-webapp/) and [`enketo-collect`](https://github.com/alxndrsn/enketo-collect).
+
+# Use
+
+## Use with npm
+
+	npm install medic-enketo-xslt
+
+## Use without npm and in any programming language. 
 
 Use as git submodule and read the [two .xsl files](./xsl) as required. Ignore index.js.
 
-### License
+# License
 
 See [license document](./LICENSE).
 
@@ -42,6 +78,6 @@ Example:
 
 Powered by <a href="https://enketo.org"><img height="16" style="height: 16px;" src="https://enketo.org/media/images/logos/enketo_bare_150x56.png" /></a>
 
-### Change Log
+# Change Log
 
 See [change log](./CHANGELOG.md)

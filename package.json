@@ -1,18 +1,18 @@
 {
-    "name": "enketo-xslt",
-    "version": "1.16.1",
-    "description": "XSL stylesheets for the Enketo XForm transformation",
+    "name": "medic-enketo-xslt",
+    "version": "1.0.0",
+    "description": "XSL stylesheets for the Enketo XForm transformation to be run client-side in a web browser",
     "main": "index.js",
     "bugs": {
-        "url": "https://github.com/enketo/enketo-xslt/issues",
-        "email": "martijn@enketo.org"
+        "url": "https://github.com/medic/enketo-xslt/issues",
+        "email": "devs@medicmobile.org"
     },
     "scripts": {
         "test": "mocha test/*.spec.js"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/enketo/enketo-xslt.git"
+        "url": "https://github.com/medic/enketo-xslt.git"
     },
     "keywords": [
         "Enketo",
@@ -24,7 +24,17 @@
     ],
     "author": "Martijn van de Rijdt",
     "license": "Apache-2.0",
+    "contributors": [ {
+        "name": "Alex Anderson"
+    } ],
+    "license": "Apache-2.0",
     "devDependencies": {
+        "chai": "^3.1.0",
+        "karma": "^0.13.2",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^0.2.0",
+        "karma-firefox-launcher": "^0.1.6",
+        "karma-mocha": "^0.2.0",
         "mocha": "^4.1.0"
     }
 }
