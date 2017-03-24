@@ -81,3 +81,28 @@ Powered by <a href="https://enketo.org"><img height="16" style="height: 16px;" s
 # Change Log
 
 See [change log](./CHANGELOG.md)
+
+# XSL Changes
+
+To suport XSL transformations in browser, we must make a few changes to the upstream stylesheets:
+
+* change XSL version from 2.0 to 1.0
+* change `<xsl:message>` calls to `<xsl:comment>`
+* change `x != y` comparisons to `not(x = y)`
+* only use `str:tokenize` within a feature switch (not supported on all browsers)
+* work around some unclear browser weirdness relating to `<xsl-apply-templates>`
+
+And for our own reasons, we make the following changes:
+
+* Do not include `<h3>No Title</h3> when we did not set a title in the XForm
+* add explicit support for `tel` data type, to allow nice soft-keyboard support on touchscreen devices
+* add support for unknown data types (treat them all as `string`/`text`)
+
+It would also be nice to minify the XSL files before use in production, to minimise transmission size.  This could include stripping meaningless whitespace, and XML comments.  However, there are some inline comments in the stylesheets which _may_ be required to preserve empty tags in place of self-closing ones.
+
+## Feature differences from upstream
+
+The above changes necessitate some differences in features from the standard [`enketo-xslt` lib](https://github.com/enketo/enketo-xslt/) lib:
+
+* only a single `or-appearance` can be applied to a particular input node.
+* `jr:constraintMsg` and `jr:requiredMsg` cannot have dynamic content
