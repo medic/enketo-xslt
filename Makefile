@@ -2,12 +2,14 @@ ifndef BROWSERS
 BROWSERS = Chrome Firefox
 endif
 
-.PHONY: default npm generate compare update-ref diff-browsers travis
+.PHONY: default npm test generate compare update-ref diff-browsers travis
 
 default: npm generate compare
 
 npm:
 	npm install
+test:
+	npm test
 generate:
 	./scripts/generate-browser-xml ${BROWSERS}
 compare:
@@ -16,4 +18,4 @@ update-ref:
 	./scripts/update-reference-xml
 diff-browsers:
 	./scripts/compare-generated Chrome Firefox
-travis: npm generate compare
+travis: npm test generate compare
