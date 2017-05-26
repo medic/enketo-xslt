@@ -910,6 +910,9 @@ XSLT Stylesheet that transforms OpenRosa style (X)Forms into valid HTMl5 forms
                     </xsl:when>
                 </xsl:choose>
             </xsl:attribute>
+            <xsl:attribute name="capture">
+                <xsl:value-of select="@capture" />
+            </xsl:attribute>
         </xsl:if>
         <!--
             <xsl:if test="$html_type = 'image'" >
