@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Outreach</h:title>
+    <model>
+      <itext>
+        <translation lang="default">
+          <text id="static_instance-sites-22">
+            <value>Goma</value>
+          </text>
+          <text id="static_instance-sites-23">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-sites-20">
+            <value>Kabonga</value>
+          </text>
+          <text id="static_instance-sites-21">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-sites-9">
+            <value>Lusolo</value>
+          </text>
+          <text id="static_instance-sites-8">
+            <value>Kirongwe</value>
+          </text>
+          <text id="static_instance-sites-7">
+            <value>Rusumo</value>
+          </text>
+          <text id="static_instance-sites-6">
+            <value>Holili</value>
+          </text>
+          <text id="static_instance-sites-5">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-sites-4">
+            <value>Muhurubay</value>
+          </text>
+          <text id="static_instance-sites-3">
+            <value>Taveta</value>
+          </text>
+          <text id="static_instance-sites-2">
+            <value>Sio Port</value>
+          </text>
+          <text id="static_instance-sites-1">
+            <value>Malaba</value>
+          </text>
+          <text id="static_instance-sites-0">
+            <value>Busia</value>
+          </text>
+          <text id="static_instance-sites-13">
+            <value>Majanji</value>
+          </text>
+          <text id="static_instance-sites-12">
+            <value>Malaba</value>
+          </text>
+          <text id="static_instance-sites-11">
+            <value>Busia</value>
+          </text>
+          <text id="static_instance-sites-10">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-sites-17">
+            <value>Gatuna</value>
+          </text>
+          <text id="static_instance-sites-16">
+            <value>Rubavu</value>
+          </text>
+          <text id="static_instance-sites-15">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-sites-14">
+            <value>Katuna</value>
+          </text>
+          <text id="static_instance-sites-19">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-sites-18">
+            <value>Rusumo</value>
+          </text>
+          <text id="static_instance-countries-5">
+            <value>DRC</value>
+          </text>
+          <text id="static_instance-countries-4">
+            <value>Burundi</value>
+          </text>
+          <text id="static_instance-countries-6">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-countries-1">
+            <value>Uganda</value>
+          </text>
+          <text id="static_instance-countries-0">
+            <value>Kenya</value>
+          </text>
+          <text id="static_instance-countries-3">
+            <value>Rwanda</value>
+          </text>
+          <text id="static_instance-countries-2">
+            <value>Tanzania</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <outreach delimiter="#" id="outreach" prefix="J1!outreach!" version="6/9/2017">
+          <country/>
+          <country_other/>
+          <site/>
+          <site_other/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </outreach>
+      </instance>
+      <instance id="sites">
+        <root>
+          <item>
+            <itextId>static_instance-sites-0</itextId>
+            <country>kenya</country>
+            <name>busia</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-1</itextId>
+            <country>kenya</country>
+            <name>malaba</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-2</itextId>
+            <country>kenya</country>
+            <name>sio_port</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-3</itextId>
+            <country>kenya</country>
+            <name>taveta</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-4</itextId>
+            <country>kenya</country>
+            <name>muhurubay</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-5</itextId>
+            <country>kenya</country>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-6</itextId>
+            <country>tanzania</country>
+            <name>holili</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-7</itextId>
+            <country>tanzania</country>
+            <name>rusumo</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-8</itextId>
+            <country>tanzania</country>
+            <name>kirongwe</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-9</itextId>
+            <country>tanzania</country>
+            <name>lusolo</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-10</itextId>
+            <country>tanzania</country>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-11</itextId>
+            <country>uganda</country>
+            <name>busia</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-12</itextId>
+            <country>uganda</country>
+            <name>malaba</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-13</itextId>
+            <country>uganda</country>
+            <name>majanji</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-14</itextId>
+            <country>uganda</country>
+            <name>katuna</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-15</itextId>
+            <country>uganda</country>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-16</itextId>
+            <country>rwanda</country>
+            <name>rubavu</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-17</itextId>
+            <country>rwanda</country>
+            <name>gatuna</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-18</itextId>
+            <country>rwanda</country>
+            <name>rusumo</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-19</itextId>
+            <country>rwanda</country>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-20</itextId>
+            <country>burundi</country>
+            <name>kabonga</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-21</itextId>
+            <country>burundi</country>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-22</itextId>
+            <country>drc</country>
+            <name>goma</name>
+          </item>
+          <item>
+            <itextId>static_instance-sites-23</itextId>
+            <country>drc</country>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="countries">
+        <root>
+          <item>
+            <itextId>static_instance-countries-0</itextId>
+            <name>kenya</name>
+          </item>
+          <item>
+            <itextId>static_instance-countries-1</itextId>
+            <name>uganda</name>
+          </item>
+          <item>
+            <itextId>static_instance-countries-2</itextId>
+            <name>tanzania</name>
+          </item>
+          <item>
+            <itextId>static_instance-countries-3</itextId>
+            <name>rwanda</name>
+          </item>
+          <item>
+            <itextId>static_instance-countries-4</itextId>
+            <name>burundi</name>
+          </item>
+          <item>
+            <itextId>static_instance-countries-5</itextId>
+            <name>drc</name>
+          </item>
+          <item>
+            <itextId>static_instance-countries-6</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/outreach/country" required="true()" type="select1"/>
+      <bind nodeset="/outreach/country_other" relevant="selected( /outreach/country , 'other')" type="string"/>
+      <bind nodeset="/outreach/site" required="true()" type="select1"/>
+      <bind nodeset="/outreach/site_other" relevant="selected( /outreach/site , 'other')" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/outreach/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <select1 appearance="minimal" ref="/outreach/country">
+      <label>Country</label>
+      <item>
+        <label>Kenya</label>
+        <value>kenya</value>
+      </item>
+      <item>
+        <label>Uganda</label>
+        <value>uganda</value>
+      </item>
+      <item>
+        <label>Tanzania</label>
+        <value>tanzania</value>
+      </item>
+      <item>
+        <label>Rwanda</label>
+        <value>rwanda</value>
+      </item>
+      <item>
+        <label>Burundi</label>
+        <value>burundi</value>
+      </item>
+      <item>
+        <label>DRC</label>
+        <value>drc</value>
+      </item>
+      <item>
+        <label>Other</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <input ref="/outreach/country_other">
+      <label>Specify other</label>
+    </input>
+    <select1 appearance="minimal" ref="/outreach/site">
+      <label>Site</label>
+      <itemset nodeset="instance('sites')/root/item[country =  /outreach/country ]">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/outreach/site_other">
+      <label>Specify other</label>
+    </input>
+  </h:body>
+</h:html>
