@@ -305,6 +305,25 @@ XSLT Stylesheet that transforms OpenRosa style (X)Forms into valid HTMl5 forms
             <xsl:text>
             </xsl:text>
         </section><xsl:comment>end of repeat fieldset with name <xsl:value-of select="@nodeset" /> </xsl:comment>
+        <!-- Add a repeat-info node -->
+        <div>
+            <xsl:attribute name="class">
+                <xsl:value-of select="'or-repeat-info'" />
+            </xsl:attribute>
+            <xsl:attribute name="data-name">
+                <xsl:value-of select="$nodeset"/>
+            </xsl:attribute>
+            <xsl:if test="@jr:count">
+                <xsl:attribute name="data-repeat-count">
+                    <xsl:value-of select="@jr:count" />
+                </xsl:attribute>
+            </xsl:if>
+             <xsl:if test="@jr:noAddRemove">
+                <xsl:attribute name="data-repeat-fixed">
+                     <xsl:value-of select="string('fixed')"/>
+                </xsl:attribute>
+            </xsl:if>
+        </div>
     </xsl:template>
 
     <xsl:template name="str-replace">
@@ -910,6 +929,11 @@ XSLT Stylesheet that transforms OpenRosa style (X)Forms into valid HTMl5 forms
                     </xsl:when>
                 </xsl:choose>
             </xsl:attribute>
+            <xsl:if test="@capture">
+                <xsl:attribute name="capture">
+                    <xsl:value-of select="@capture" />
+                </xsl:attribute>
+            </xsl:if>
         </xsl:if>
         <!--
             <xsl:if test="$html_type = 'image'" >
