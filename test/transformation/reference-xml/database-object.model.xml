@@ -1,8 +1,9 @@
 <model xmlns="http://www.w3.org/2002/xforms"><instance>
-				<person id="person" version="1">
+				<clinic id="clinic" version="1">
 					<loc/>
+					<contact/>
 					<meta>
 						<instanceID/>
 					</meta>
-				</person>
+				</clinic>
 			</instance></model>

@@ -1,6 +1,8 @@
 <model xmlns="http://www.w3.org/2002/xforms"><instance>
         <data id="V" version="2015-06-05">
-          <pregnancy_id tag="id"/>
+          <outputs>
+            <pregnancy_id tag="id"/>
+          </outputs>
           <meta>
             <start tag="m_st"/>
             <end tag="m_et"/>
