@@ -1,4 +1,4 @@
-<form autocomplete="off" novalidate="novalidate" class="or clearfix pages" dir="ltr" id="HH"><!--This form was created by transforming a OpenRosa-flavored (X)Form using an XSL stylesheet created by Enketo LLC.--><section class="form-logo"/><h3 id="form-title">New Household</h3>
+<form autocomplete="off" novalidate="novalidate" class="or clearfix pages" dir="ltr" id="HH"><!--This form was created by transforming a OpenRosa-flavored (X)Form using an XSL stylesheet created by Enketo LLC.--><section class="form-logo"/><h3 dir="auto" id="form-title">New Household</h3>
   
   
     <label class="question non-select "><span lang="" class="question-label active">Head of Household</span><span class="required">*</span><input type="text" name="/data/household_head" data-required="true()" data-type-xml="string"/><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label>
