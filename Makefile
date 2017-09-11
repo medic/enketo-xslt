@@ -17,5 +17,5 @@ compare:
 update-ref:
 	./scripts/update-reference-xml
 diff-browsers:
-	./scripts/compare-generated Chrome Firefox
+	./scripts/compare-generated ${BROWSERS}
 travis: npm test generate compare
