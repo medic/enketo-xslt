@@ -27,8 +27,15 @@ Edit with care!
         <root>
             <model xmlns="http://www.w3.org/2002/xforms">
                 <xsl:apply-templates select="//xf:model/xf:instance" />
+                <xsl:apply-templates select="//xf:model/xf:itext" />
             </model>
         </root>
+    </xsl:template>
+
+    <xsl:template match="xf:itext">
+        <itext>
+            <xsl:copy-of select="node()" />
+        </itext>
     </xsl:template>
 
     <xsl:template match="xf:instance">
