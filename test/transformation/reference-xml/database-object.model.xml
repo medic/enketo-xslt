@@ -1,4 +1,4 @@
-<model><instance>
+<model xmlns="http://www.w3.org/2002/xforms"><instance>
 				<person id="person" version="1">
 					<loc/>
 					<meta>

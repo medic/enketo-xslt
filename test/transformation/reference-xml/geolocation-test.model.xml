@@ -1,4 +1,4 @@
-<model><instance>
+<model xmlns="http://www.w3.org/2002/xforms"><instance>
         <geolocation-test id="GEO" version="2015-08-24 00:00:00">
           <Location>
             <location_gps/>
