@@ -1,4 +1,4 @@
-<form autocomplete="off" novalidate="novalidate" class="or clearfix pages" dir="ltr" id="EDCD_H01"><!--This form was created by transforming a OpenRosa-flavored (X)Form using an XSLT sheet created by Enketo LLC.--><section class="form-logo"/><h3 id="form-title">Daily Hospital Surveillance</h3>
+<form autocomplete="off" novalidate="novalidate" class="or clearfix pages" dir="ltr" id="EDCD_H01"><!--This form was created by transforming a OpenRosa-flavored (X)Form using an XSL stylesheet created by Enketo LLC.--><section class="form-logo"/><h3 id="form-title">Daily Hospital Surveillance</h3>
   
   
     <label class="question non-select or-appearance-no-calendar "><span lang="" class="question-label active">Reporting for (Date)</span><span class="required">*</span><input type="date" name="/hospital/report_date" data-required="true()" data-constraint=". &lt;= today()" data-type-xml="date"/><span lang="" class="or-constraint-msg active">Dates in the future are not allowed.</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label>
