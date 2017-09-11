@@ -1,4 +1,4 @@
-<model><instance>
+<model xmlns="http://www.w3.org/2002/xforms"><instance>
         <dosages id="DSG" version="2015-07-22 00:00:00">
           <health_need/>
           <malaria_fever/>

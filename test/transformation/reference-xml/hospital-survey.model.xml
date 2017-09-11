@@ -1,4 +1,4 @@
-<model><instance>
+<model xmlns="http://www.w3.org/2002/xforms"><instance>
         <hospital id="EDCD_H01" version="2015-06-17">
           <report_date tag="date"/>
           <select_facility tag="hs"/>
