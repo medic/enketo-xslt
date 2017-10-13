@@ -20,8 +20,7 @@ XSLT Stylesheet that transforms OpenRosa style (X)Forms into valid HTMl5 forms
     xmlns:jr="http://openrosa.org/javarosa"
     xmlns:exsl="http://exslt.org/common"
     xmlns:str="http://exslt.org/strings"
-    xmlns:dyn="http://exslt.org/dynamic"
-    extension-element-prefixes="exsl str dyn"
+    extension-element-prefixes="exsl str"
     version="2.0"
     >
     <xsl:param name="include-relevant-msg"/>
@@ -52,12 +51,6 @@ XSLT Stylesheet that transforms OpenRosa style (X)Forms into valid HTMl5 forms
     <xsl:template match="/">
         <xsl:if test="not(function-available('exsl:node-set'))">
             <xsl:comment>WARNING: exsl:node-set function is not available in this XSLT processor</xsl:comment>
-        </xsl:if>
-        <xsl:if test="not(function-available('str:replace'))">
-            <xsl:comment>WARNING: str:replace function is not available in this XSLT processor</xsl:comment>
-        </xsl:if>
-        <xsl:if test="not(function-available('dyn:evaluate'))">
-            <xsl:comment>WARNING: dyn:evaluate function is not available in this XSLT processor</xsl:comment>
         </xsl:if>
         <xsl:if test="not(function-available('str:tokenize'))">
             <xsl:comment>WARNING: str:tokenize function is not available in this XSLT processor</xsl:comment>
@@ -575,12 +568,6 @@ XSLT Stylesheet that transforms OpenRosa style (X)Forms into valid HTMl5 forms
         <xsl:variable name="value-ref" select="./xf:value/@ref" />
         <xsl:variable name="label-ref" select="./xf:label/@ref" />
         <xsl:variable name="iwq" select="substring-before(substring-after(@nodeset, 'instance('),')/')" />
-        <xsl:variable name="instance-path" select="str:replace(substring-after(@nodeset, ')'), '/', '/xf:')" />
-        <xsl:variable name="instance-path-nofilter">
-            <xsl:call-template name="strip-filter">
-                <xsl:with-param name="string" select="$instance-path"/>
-            </xsl:call-template>
-        </xsl:variable> 
         <xsl:variable name="instance-id" select="substring($iwq, 2, string-length($iwq)-2)" />    
         <span class="itemset-labels">
             <xsl:attribute name="data-value-ref">
@@ -596,7 +583,7 @@ XSLT Stylesheet that transforms OpenRosa style (X)Forms into valid HTMl5 forms
                     <xsl:attribute name="data-label-ref">
                         <xsl:value-of select="$label-node-name"/>
                     </xsl:attribute>
-                    <xsl:for-each select="dyn:evaluate(concat('/h:html/h:head/xf:model/xf:instance[@id=&quot;', $instance-id, '&quot;]', $instance-path-nofilter))">
+                    <xsl:for-each select="/h:html/h:head/xf:model/xf:instance[@id=$instance-id]/xf:root/xf:item">
                         <!-- so this is support for itext(node) (not itext(path/to/node)), but only 'ad-hoc' for itemset labels for now -->
                         <xsl:variable name="id" select="./*[name()=$label-node-name]" />
                         <xsl:call-template name="translations">
