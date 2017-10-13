@@ -18,6 +18,7 @@ describe('transformations', function() {
   });
 
   [
+      'cascading-selects',
       'database-object',
       'dosages',
       'geolocation-test',
