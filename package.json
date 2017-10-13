@@ -1,6 +1,6 @@
 {
     "name": "medic-enketo-xslt",
-    "version": "1.4.1",
+    "version": "1.5.0",
     "description": "XSL stylesheets for the Enketo XForm transformation to be run client-side in a web browser",
     "main": "index.js",
     "bugs": {
