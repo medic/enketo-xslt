@@ -23,19 +23,21 @@
         "Transformer"
     ],
     "author": "Martijn van de Rijdt",
-    "contributors": [ {
-        "name": "Alex Anderson"
-    } ],
+    "contributors": [
+        {
+            "name": "Alex Anderson"
+        }
+    ],
     "license": "Apache-2.0",
     "devDependencies": {
-        "chai": "^3.1.0",
+        "chai": "^4.1.2",
         "grunt": "^1.0.1",
         "grunt-xmllint": "^1.0.0",
-        "karma": "^0.13.2",
+        "karma": "^1.7.1",
         "karma-chai": "^0.1.0",
-        "karma-chrome-launcher": "^0.2.0",
-        "karma-firefox-launcher": "^0.1.6",
-        "karma-mocha": "^0.2.0",
-        "mocha": "^2.2.5"
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-firefox-launcher": "^1.0.1",
+        "karma-mocha": "^1.3.0",
+        "mocha": "^4.0.1"
     }
 }
