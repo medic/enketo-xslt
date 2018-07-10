@@ -10,6 +10,8 @@ npm:
 	npm install
 test:
 	npm test
+dev:
+	(./scripts/generate-browser-xml Chrome && ./scripts/compare-with-reference-xml Chrome) || less ./build/logs/Chrome.log
 generate:
 	./scripts/generate-browser-xml ${BROWSERS}
 compare:

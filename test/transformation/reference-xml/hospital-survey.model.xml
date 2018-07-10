@@ -1,5 +1,5 @@
-<model xmlns="http://www.w3.org/2002/xforms"><instance>
-        <hospital id="EDCD_H01" version="2015-06-17">
+<model><instance>
+        <hospital xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" id="EDCD_H01" version="2015-06-17">
           <report_date tag="date"/>
           <select_facility tag="hs"/>
           <group_facility>

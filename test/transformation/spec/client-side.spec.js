@@ -18,14 +18,23 @@ describe('transformations', function() {
   });
 
   [
+      'assessment',
       'cascading-selects',
       'database-object',
+      'difference-in-months',
       'dosages',
+      'family',
       'geolocation-test',
+      'hidden-outputs',
       'hospital-survey',
       'households',
+      'markdown',
+      'order',
       'pictorial-report',
+      'place',
       'pregnancy',
+      'repeat-example',
+      'timer',
       'treatments',
       'visit-report',
   ].forEach(function(xform) {

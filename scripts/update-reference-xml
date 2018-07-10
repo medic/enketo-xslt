@@ -1,30 +1,22 @@
-#!/bin/bash -eu
-dir="$(pwd)/reference-xml"
-url="http://raw.githubusercontent.com/alxndrsn/enketo-client-side-transformer/master/xforms"
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const transformer = require('enketo-transformer');
 
-log() {
-	echo "[$0] $@"
-}
+const xmlDir = 'test/transformation/xforms';
 
-log "Cleaning..."
-rm -rf $dir || true
-mkdir $dir
-
-cd xforms
-for src in *.xml; do
-	form="${src%.*}"
-	log "Processing ${form}..."
-	curl "http://xslt-dev.enketo.org/transform?xform=${url}/${src}" | node -e "
-		try {
-		  var fs = require('fs'),
-		      stdin = fs.readFileSync('/dev/stdin').toString(),
-		      form = JSON.parse(stdin);
-		  fs.writeFileSync('${dir}/${form}.html.xml', form.form);
-		  fs.writeFileSync('${dir}/${form}.model.xml', form.model);
-		} catch(e) {
-		  console.log('WARN | Failed to process ${form}: ' + e);
-		}
-	"
-done
-
-log "Complete."
+fs.readdirSync(xmlDir)
+  .filter(f => f.endsWith('.xml'))
+  .reduce((promiseChain, file) =>
+      promiseChain
+        .then(() => console.log(`# Processing: ${file}…`))
+        .then(() => fs.readFileSync(`${xmlDir}/${file}`, { encoding:'utf8' }))
+        .then(xform => transformer.transform({ xform }))
+        .then(({ form, model }) => {
+          const name = path.parse(file).name;
+          fs.writeFileSync(`test/transformation/reference-xml/${name}.html.xml`,  form);
+          fs.writeFileSync(`test/transformation/reference-xml/${name}.model.xml`, model);
+        })
+        .then(() => console.log(`# Done: ${file}`)),
+      Promise.resolve())
+  .then(() => console.log('Update complete.'));
