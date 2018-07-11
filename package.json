@@ -1,6 +1,6 @@
 {
     "name": "medic-enketo-xslt",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "description": "XSL stylesheets for the Enketo XForm transformation to be run client-side in a web browser",
     "main": "index.js",
     "bugs": {
@@ -31,6 +31,7 @@
     "license": "Apache-2.0",
     "devDependencies": {
         "chai": "^4.1.2",
+        "enketo-transformer": "^1.28.0",
         "grunt": "^1.0.1",
         "grunt-xmllint": "^1.0.0",
         "karma": "^1.7.1",

@@ -1,5 +1,5 @@
-<model xmlns="http://www.w3.org/2002/xforms"><instance>
-        <geolocation-test id="GEO" version="2015-08-24 00:00:00">
+<model><instance>
+        <geolocation-test xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" id="GEO" version="2015-08-24 00:00:00">
           <Location>
             <location_gps/>
             <location_calc/>
